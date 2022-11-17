@@ -1,0 +1,2 @@
+# Morty
+Discord bot
