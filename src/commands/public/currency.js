@@ -6,12 +6,12 @@ module.exports = {
         .setName('price')
         .setDescription('Converts ARS to USD')
         .addStringOption(option =>
-            option.setName('price')
-                .setDescription('Enter the price in ARS')
+            option.setName('ars')
+                .setDescription('Price in ARS')
                 .setRequired(true)),
     async execute(interaction) {
         // Get the price from the input
-        const price = interaction.options.getString('price');
+        const price = interaction.options.getString('ars');
         // Convert the price to USD
         const result = convertCurrency(parseFloat(price));
         // Send the result to the channel
