@@ -1,26 +1,23 @@
 {
   "name": "morty-discord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord bot",
-  "main": "src/index.js",
   "scripts": {
-    "dev": "clear && nodemon .",
-    "start": "clear && node ."
+    "start": "node dist/index.js",
+    "dev": "tsc && concurrently \"tsc -w\" \"nodemon dist/app.js\"",
+    "watch-ts": "tsc -w",
+    "build": "tsc"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cabrera-evil/Morty-Discord.git"
-  },
-  "author": "cabrera-evil",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cabrera-evil/Morty-Discord/issues"
-  },
-  "homepage": "https://github.com/cabrera-evil/Morty-Discord#readme",
   "dependencies": {
-    "axios": "^1.1.3",
-    "discord.js": "^14.6.0",
-    "dotenv": "^16.0.3",
-    "nodemon": "^2.0.20"
+    "@types/node": "^20.6.5",
+    "axios": "^1.5.0",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
   }
 }
